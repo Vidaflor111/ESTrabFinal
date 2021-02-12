@@ -2,7 +2,7 @@
 
 ## Nagini
 
-Loja de roupas e acessórios online para comprar sem sair de casa.
+Loja de roupas e acessórios online.
 
 **TECNOLOGIAS UTILIZADAS**
 
