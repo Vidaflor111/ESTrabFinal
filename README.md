@@ -2,7 +2,7 @@
 
 ## Nagini
 
-Loja de roupas e acessórios online.
+Sistema para uma loja de roupas e acessórios.
 
 **TECNOLOGIAS UTILIZADAS**
 
