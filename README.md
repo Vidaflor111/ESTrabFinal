@@ -21,8 +21,8 @@ Commit - Informe o que foi feito no commit
 Branchs:
 
 Definição de pastas:
-- Os diagramas devem ser guardados na pasta diagramas
 - Os documentos devem ser guardados na pasta requisitos
+- Os códigos devem ser guardados na pasta cod
 
 Programação: 
 - O código deve ser organizado.
