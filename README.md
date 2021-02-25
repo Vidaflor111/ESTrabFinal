@@ -25,6 +25,10 @@ Definição de pastas:
 - Os códigos devem ser guardados na pasta cod
 
 Programação: 
-- O código deve ser organizado.
-- O código deve conter comentarios caso nescessario.
-- O código não deve ter erros de identação.
+- Comece todo o programa com a finalidade do mesmo.
+- Identar o código.
+- Declare cada variável em uma linha para facilitar a escrita de comentários.
+- Comentar código.
+- Nomear funções de maneira intuitiva.
+- Nomear variáveis de maneira intuitiva.
+- Teste os programas exaustivamente.
