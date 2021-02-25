@@ -12,7 +12,7 @@ HTML5 5.0
 
 Servidor - Apache 2.4.46
 
-Banco de dados - Mysql Workbench
+Banco de dados - Mysql Workbench 8.0.21
 
 
 **REGRAS E PADRÕES DE USO DO GIT**
