@@ -1,12 +1,12 @@
 <?php
-$nome= $_POST['cnome'];
-$email= $_POST['cemail'];
-$senha= $_POST['csenha'];
-$cpf= $_POST['ccpf'];
+$newnome= $_POST['cnovonome'];
+$newemail= $_POST['cnovoemail'];
+$newsenha= $_POST['cnovosenha'];
+$newcpf= $_POST['cnovocpf'];
 
 echo "<html>
 		<body>
-			<h1>" . $nome." ".$email." ".$senha." ".$cpf.
+			<h1>" . $newnome." ".$newemail." ".$newsenha." ".$newcpf.
 		"</body>
 		</html>" ;
 
@@ -20,10 +20,10 @@ $conn = mysqli_connect($severname,$username,$password,$bd);
 if ( !$conn){
 	die ("conexao falhou:".$conn->connect_error);
 }
-$sql= "INSERT INTO cliente(Nome, Email, Senha, cpf) VALUES ('$nome','$email','$senha','$cpf')";
+$sql= "UPDATE cliente SET Nome='$newnome',Email='$newemail',Senha='$newsenha',CPF='$newcpf' WHERE 1";
 
 if($conn->query($sql) ==TRUE){
-	echo "Cliente Salvo";
+	echo "Cliente alterado com sucesso";
 }
 else{
 	echo "Erro no cadastramento: <br>".$conn->error;
