@@ -20,7 +20,7 @@ $conn = mysqli_connect($severname,$username,$password,$bd);
 if ( !$conn){
 	die ("conexao falhou:".$conn->connect_error);
 }
-$sql= "UPDATE cliente SET Nome='$newnome',Email='$newemail',Senha='$newsenha',CPF='$newcpf' WHERE 1";
+$sql= "UPDATE cliente SET Nome='$newnome',Email='$newemail',Senha='$newsenha',CPF='$newcpf'";
 
 if($conn->query($sql) ==TRUE){
 	echo "Cliente alterado com sucesso";
