@@ -11,11 +11,11 @@ $conn = mysqli_connect($severname,$username,$password,$bd);
 if ( !$conn){
 	die ("conexao falhou:".$conn->connect_error);
 }
-$sql= "SELECT Nome, Email, Senha, CPF FROM cliente WHERE 1";
+$sql= "DELETE FROM cliente WHERE 1";
 
 
 if($conn->query($sql) ==TRUE){
-	echo "Cliente consultado com sucesso";
+	echo "Cliente Excluido com sucesso";
 }
 else{
 	echo "Erro no cadastramento: <br>".$conn->error;
