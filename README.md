@@ -16,6 +16,7 @@ Banco de dados - Mysql Workbench 8.0.21
 
 
 **REGRAS E PADRÕES DE USO DO GIT**
+
 Commit - Informe o que foi feito no commit
 
 Branchs:
