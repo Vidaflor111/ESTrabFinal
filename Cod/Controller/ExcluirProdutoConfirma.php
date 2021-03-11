@@ -1,21 +1,21 @@
 <?php
 
 include_once '..\Persistence\Connection.php';
-include_once '..\Model\Produto.php';
 include_once '..\Persistence\ProdutoDAO.php';
 
-$nome= $_POST['cnome'];
-$valor= $_POST['cvalor'];
-$cod= $_POST['ccodigo'];
-
+$produto= $_POST['cprod'];
 
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
 
-$prod = new Produto($nome, $valor, $cod);
-
 $produtodao = new ProdutoDAO();
-$produtodao->salvar($prod, $conexao);
+$res = $produtodao->Excluir($produto, $conexao);
+
+if($res===TRUE){
+	echo "Produto excluido com sucesso";
+}else{
+	echo "Erro ao excluir produto:" . $conexao->error;
+}
 
 
 
