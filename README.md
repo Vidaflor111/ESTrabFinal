@@ -2,7 +2,7 @@
 
 ## Nagini
 
-Sistema Nagini é um site em que os funcionarios e os clientes poderão, se cadastrar, fazer compras e vendas de roupas e acessorios.
+Sistema para uma loja de roupas e acessórios.
 
 **TECNOLOGIAS UTILIZADAS**
 
