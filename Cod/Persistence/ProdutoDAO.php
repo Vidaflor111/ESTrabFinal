@@ -20,18 +20,18 @@ class ProdutoDAO{
 			echo "Erro no cadastramento: <br>".$conn->error;
 		}
 	}
-	function Consultar($compra, $conn){
-		$sql = "SELECT CPFcliente, data, CodProduto, Quantidade, CodCompra FROM compra WHERE CodCompra=".$compra;
+	function Consultar($produto, $conn){
+		$sql = "SELECT NomeProd, Valor, CodProd FROM produto WHERE CodProd=".$produto;
 		$res = $conn->query($sql);
 		return $res;
 	}
-	function Excluir($compra, $conn){
-		$sql = "DELETE FROM compra WHERE CodCompra=".$compra;
+	function Excluir($produto, $conn){
+		$sql = "DELETE FROM produto WHERE CodProd=".$produto;
 		$res = $conn->query($sql);
 		return $res;
 	}
-	function Alterar($comp, $conn){
-		$sql = "UPDATE compra SET CPFcliente='".$comp->getCliCPF() ."', Data='" .$comp->getData() ."', CodProduto='".$comp->getProd() . "', Quantidade='".$comp->getQuant() . "' WHERE CodCompra=".$comp->getCompra();
+	function Alterar($prod, $conn){
+		$sql = "UPDATE produto SET NomeProd='".$prod->getNome() ."', Valor=" .$prod->getValor() ." WHERE CodProd=".$prod->getCod();
 		$res = $conn->query($sql);
 		return $res;
 	}
