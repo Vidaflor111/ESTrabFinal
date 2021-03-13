@@ -9,12 +9,14 @@ $email= $_POST['cemail'];
 $senha= $_POST['csenha'];
 $cpf= $_POST['ccpf'];
 
+//Criando conexao
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
-
+//Criando objeto funcionario
 $funcionario = new Funcionario($nome, $email, $senha, $cpf);
-
+//Criando objeto DAO
 $funcionariodao = new FuncionarioDAO();
+//Salvando funcionario
 $funcionariodao->salvar($funcionario, $conexao);
 
 

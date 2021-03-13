@@ -7,10 +7,12 @@ $produto= $_POST['cprod'];
 
 
 
+//Criando conexao
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
-
+//Criando objeto DAO
 $produtodao = new ProdutoDAO();
+//res= resultado, para ver se o produto esta cadastrado no BD
 $res = $produtodao->Consultar($produto, $conexao);
 
 if($res->num_rows == 1){

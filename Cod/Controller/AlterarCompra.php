@@ -5,11 +5,12 @@ include_once '..\Persistence\CompraDAO.php';
 
 $compra= $_POST['ccompra'];
 
-
+//Criando conexao
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
-
+//Criando objetoDAO
 $compradao = new CompraDAO();
+//res= resultado, para ver se a compra esta cadastrada no BD
 $res = $compradao->Consultar($compra, $conexao);
 
 if($res->num_rows == 1){

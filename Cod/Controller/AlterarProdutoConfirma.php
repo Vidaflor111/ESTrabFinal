@@ -8,13 +8,14 @@ $nome= $_POST['cnome'];
 $valor= $_POST['cvalor'];
 $produto= $_POST['cprod'];
 
-
+//Criando objeto produto
 $prod = new Produto($nome, $valor, $produto);
-
+//Criando conexao
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
 
 $produtodao = new ProdutoDAO();
+//res= resultado, para ver se o o produto foi alterado
 $res = $produtodao->alterar($prod, $conexao);
 
 if($res===TRUE){

@@ -5,12 +5,15 @@ include_once '..\Persistence\ClienteDAO.php';
 
 $cpf= $_POST['ccpf'];
 
-
+//Criando conexao
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
 
+//Criando objeto DAO
 $clientedao = new ClienteDAO();
-$res = $clientedao->Consultar($cpf, $conexao);
+
+
+$res = $clientedao->Consultar($cpf, $conexao);//res= resultado, para ver se o cliente esta cadastrado no BD
 
 if($res->num_rows == 1){
 	/* FORMULARIO PARA VISUALIZAR DADOS*/

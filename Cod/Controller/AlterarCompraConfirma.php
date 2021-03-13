@@ -8,13 +8,14 @@ $produto= $_POST['cproduto'];
 $quantidade= $_POST['cquantidade'];
 $cpf= $_POST['ccpf'];
 $compra= $_POST['ccompra'];
-
+//Criando objeto compra
 $comp = new Compra($cpf, $data, $produto, $quantidade, $compra);
-
+//Criando conexao
 $conexao = new Connection();
 $conexao = $conexao -> getConnection();
-
+//Criando objeto DAO
 $compradao = new CompraDAO();
+//res= resultado, para ver se a compra foi alterada
 $res = $compradao->Alterar($comp, $conexao);
 
 if($res===TRUE){
