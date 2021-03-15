@@ -11,7 +11,7 @@ $cpf= $_POST['ccpf'];
 $cpfAntigo= $_POST['cantigocpf'];
 
 //Criando objeto cliente
-$c = new Cliente($nome, $email, $senha, $cpf, $cpfAntigo);
+$c = new Cliente($nome, $email, $senha, $cpf);
 
 //Criando conexao
 $conexao = new Connection();
@@ -20,7 +20,7 @@ $conexao = $conexao -> getConnection();
 //Criando objeto DAO
 $clientedao = new ClienteDAO();
 //res= resultado, para ver se o o cliente foi alterado
-$res = $clientedao->Alterar($c, $conexao);
+$res = $clientedao->Alterar($c, $conexao, $cpfAntigo);
 
 if($res===TRUE){
 	echo "Cliente alterado com sucesso";

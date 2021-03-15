@@ -28,7 +28,7 @@ echo "<!DOCTYPE html>
 	Nova quantidade: <input type='text' name='cquantidade' value ='".$registro['Quantidade']."' > <br><br>
 	<input type='text' hidden name='ccompra' value ='".$registro['CodCompra']."'> <br><br>
 	<input type='submit' value='Alterar'>
-	<input type='reset' value='Limpar'>
+	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
 </form>
 
 </body>

@@ -29,7 +29,7 @@ echo "<!DOCTYPE html>
 	
 
 	<input type='submit' value='Confirmar'>
-	<input type='reset' value='Limpar'>
+	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
 </form>
 
 </body>

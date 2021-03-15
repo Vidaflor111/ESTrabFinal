@@ -26,7 +26,7 @@ echo "<!DOCTYPE html>
 	Senha: <input type='password' disabled name='csenha' value ='".$registro['Senha']."'> <br><br>
 	<input type='text' name='ccpf' hidden value ='".$registro['Cpf']."'> <br><br>
 	<input type='submit' value='Confirmar'>
-	<input type='reset' value='Limpar'>
+	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
 </form>
 
 </body>

@@ -28,7 +28,7 @@ echo "<!DOCTYPE html>
 	Novo Nome: <input type='text' name='cnome' value ='".$registro['NomeProd']."' > <br><br>
 	Novo Valor: <input type='decimal' name='cvalor' value =".$registro['Valor']."> <br><br>
 	<input type='submit' value='Alterar'>
-	<input type='reset' value='Limpar'>
+	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
 </form>
 
 </body>

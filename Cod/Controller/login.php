@@ -18,7 +18,19 @@ if ($res) {
 }
 else {
 	// Caso nao emite um erro
-	echo "<h2>Email e/ou Senha incorretos</h2><br><form action='' method='post'><br><button type='button' onclick=location.href='../View/inicio.html'>Voltar</button>";
+	echo "<!DOCTYPE html>
+	<html>
+	<body>
+	<h2>Email e/ou Senha incorretos</h2><br>
+	
+	
+	
+	<button type='button' onclick='location.href='..\View\login.html''>Voltar</button>
+	
+
+	</body>
+	</html>
+	";
 }
 
 ?>

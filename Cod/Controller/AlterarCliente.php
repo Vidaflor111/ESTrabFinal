@@ -30,7 +30,7 @@ echo "<!DOCTYPE html>
 	Nova Senha: <input type='password' name='csenha' value ='".$registro['Senha']."'> <br><br>
 	Novo CPF: <input type='text' name='ccpf' value ='".$registro['Cpf']."'> <br><br>
 	<input type='submit' value='Alterar'>
-	<input type='reset' value='Limpar'>
+	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
 </form>
 
 </body>
