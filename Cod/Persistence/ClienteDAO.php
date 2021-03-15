@@ -31,8 +31,8 @@ class ClienteDAO{
 		$res = $conn->query($sql);
 		return $res;
 	}
-	function Alterar($c, $conn){
-		$sql = "UPDATE cliente SET Nome='".$c->getNome() ."', Email='" .$c->getEmail() ."', Senha='".$c->getSenha() . "', CPF='".$c->getCPF() . "' WHERE cpf=".$c->cpfAntigo();
+	function Alterar($c, $conn, $cpfAntigo){
+		$sql = "UPDATE cliente SET Nome='".$c->getNome() ."', Email='" .$c->getEmail() ."', Senha='".$c->getSenha() . "', CPF='".$c->getCPF() . "' WHERE cpf=".$cpfAntigo;
 		$res = $conn->query($sql);
 		return $res;
 	}
