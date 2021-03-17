@@ -14,6 +14,8 @@ Servidor - Apache 2.4.46
 
 Banco de dados - Mysql Workbench 8.0.21
 
+Teste - PHPUnit - 9.5.2
+
 
 **REGRAS E PADRÕES DE USO DO GIT**
 
@@ -26,7 +28,7 @@ Definição de pastas:
 - Os códigos devem ser guardados na pasta cod
 
 Programação: 
-- Comece todo o programa com a finalidade do mesmo.
+- Coloque um espaço após cada vírgula.
 - Identar o código.
 - Declare cada variável em uma linha para facilitar a escrita de comentários.
 - Comentar código.
