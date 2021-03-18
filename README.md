@@ -6,13 +6,13 @@ Nagini é um site em que os funcionarios e os clientes poderão, se cadastrar, f
 
 **TECNOLOGIAS UTILIZADAS**
 
-PHP 7.4.9
+PHP 7.3.27
 
 HTML5 5.0
 
 Servidor - Apache 2.4.46
 
-Banco de dados - Mysql Workbench 8.0.21
+Banco de dados - MariaDB 10.4.18
 
 Teste - PHPUnit - 9.5.2
 
@@ -31,7 +31,7 @@ Programação:
 - Coloque um espaço após cada vírgula.
 - Identar o código.
 - Declare cada variável em uma linha para facilitar a escrita de comentários.
-- Comentar código.
+- Comentar código (com 4 espaços).
 - Nomear funções de maneira intuitiva.
 - Nomear variáveis de maneira intuitiva.
 - Teste os programas exaustivamente.
