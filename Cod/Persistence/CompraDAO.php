@@ -10,14 +10,16 @@ class CompraDAO{
 		$compra->getData() . "','" . 
 		$compra->getProd() . "','" . 
 		$compra->getQuant() . "','" . 
-		$compra->getCompra() . " ' " . ")";
+		$compra->getCodCompra() . "' " . ")";
 		
 
 		
 		
 
 		if($conn->query($sql) ==TRUE){
-			echo "Cliente Salvo";
+			echo "Compra cadastrada com sucesso";
+		}else if($conn->error == "Duplicate entry '".$compra->getCodCompra()."' for key 'PRIMARY'"){
+			echo "<h3>Código da compra já esta cadastrado.</h3> <br>".$conn->error;
 		}else{
 			echo "Erro no cadastramento: <br>".$conn->error;
 		}
@@ -33,7 +35,7 @@ class CompraDAO{
 		return $res;
 	}
 	function Alterar($comp, $conn){
-		$sql = "UPDATE compra SET CPFcliente='".$comp->getCliCPF() ."', Data='" .$comp->getData() ."', CodProduto='".$comp->getProd() . "', Quantidade='".$comp->getQuant() . "' WHERE CodCompra=".$comp->getCompra();
+		$sql = "UPDATE compra SET CPFcliente='".$comp->getCliCPF() ."', Data='" .$comp->getData() ."', CodProduto='".$comp->getProd() . "', Quantidade='".$comp->getQuant() . "' WHERE CodCompra=".$comp->getCodCompra();
 		$res = $conn->query($sql);
 		return $res;
 	}

@@ -5,16 +5,16 @@ class Compra{
 	private $data;
 	private $produto;
 	private $quantidade;
-	private $compra;
+	private $CodCompra;
 	
 
 	
-	function __construct($vcliCPF, $vdata, $vproduto, $vquantidade, $vcompra){
+	function __construct($vcliCPF, $vdata, $vproduto, $vquantidade, $vCodCompra){
 		$this -> cliCPF = $vcliCPF;
 		$this -> data = $vdata;
 		$this -> produto = $vproduto;
 		$this -> quantidade = $vquantidade;
-		$this -> compra = $vcompra;
+		$this -> CodCompra = $vCodCompra;
 
 	}
 	
@@ -30,8 +30,8 @@ class Compra{
 	function getQuant(){
 		return $this -> quantidade;
 	}
-	function getCompra(){
-		return $this -> compra;
+	function getCodCompra(){
+		return $this -> CodCompra;
 	}
 
 }

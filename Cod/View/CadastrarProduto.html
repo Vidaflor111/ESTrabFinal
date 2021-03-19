@@ -7,9 +7,9 @@
 	<h2>Cadastrar Produto</h2>
 	
 <form action="..\Controller\CadastrarProduto.php" method="POST">
-	Nome: <input type="text" name="cnome" > <br><br>
-	Valor: <input type="decimal" name="cvalor"> <br><br>
-	Codigo Produto: <input type="text" name="ccodigo"> <br><br>
+	Nome: <input type="text" name="cnome" required> <br><br>
+	Valor: <input type="decimal" name="cvalor" required> <br><br>
+	Codigo Produto: <input type="text" name="ccodigo" required> <br><br>
 	<input type="submit" value="Cadastrar">
 	<button type="button" onclick="location.href='inicio.html'">Voltar</button>
 </form>

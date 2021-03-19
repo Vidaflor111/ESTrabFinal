@@ -8,7 +8,7 @@ require_once('Compra.php');/*precisa alterar para a pasta que arquivo compra.php
 			$this -> assertEquals('2021-03-04', $obj->getData(), "assert com a data");
 			$this -> assertEquals('2', $obj->getProd(), "assert com o cod produto");
 			$this -> assertEquals('3', $obj->getQuant(), "assert com a quantidade");
-			$this -> assertEquals('1', $obj->getCompra(), "assert com o cod compra");
+			$this -> assertEquals('1', $obj->getCodCompra(), "assert com o cod compra");
 			
 
 		}

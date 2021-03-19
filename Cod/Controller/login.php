@@ -18,14 +18,15 @@ if ($res) {
 }
 else {
 	// Caso nao emite um erro
-	echo "<!DOCTYPE html>
+    echo "<!DOCTYPE html>
 	<html>
-	<body>
+	<body>	
 	<h2>Email e/ou Senha incorretos</h2><br>
 	
 	
+	<a href='http://localhost/html/View/login.html'>
 	
-	<button type='button' onclick='location.href='..\View\login.html''>Voltar</button>
+	<button>Voltar</button></a>
 	
 
 	</body>

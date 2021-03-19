@@ -7,10 +7,10 @@
 	<h2>Cadastro de Funcionário</h2>
 	
 <form action="..\Controller\CadastrarFuncionario.php" method="POST">
-	Nome: <input type="text" name="cnome" > <br><br>
-	Email: <input type="email" name="cemail"> <br><br>
-	Senha: <input type="password" name="csenha"> <br><br>
-	CPF: <input type="text" name="ccpf" > <br><br>
+	Nome: <input type="text" name="cnome" required> <br><br>
+	Email: <input type="email" name="cemail" required> <br><br>
+	Senha: <input type="password" name="csenha" required> <br><br>
+	CPF: <input type="text" name="ccpf" required> <br><br>
 	<input type="submit" value="Cadastrar">
 	<button type="button" onclick="location.href='login.html'">Voltar</button>
 </form>

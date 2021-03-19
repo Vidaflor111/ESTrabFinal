@@ -9,18 +9,23 @@ class FuncionarioDAO{
 		$funcionario->getNome() . "','" . 
 		$funcionario->getEmail() . "','" . 
 		$funcionario->getSenha() . "','" . 
-		$funcionario->getCPF() . " ' " . ")";
+		$funcionario->getCPF() . "' " . ")";
 		
 
 		
 		
 
 		if($conn->query($sql) ==TRUE){
-			echo "Funcionario Salvo";
+			echo "Funcionario Cadastrado";
+		}else if($conn->error == "Duplicate entry '".$funcionario->getEmail()."' for key 'Email'"){
+			echo "<h2>O E-mail já esta cadastrado.</h2> <br>".$conn->error;
+		}else if($conn->error == "Duplicate entry '".$funcionario->getCPF()."' for key 'PRIMARY'"){
+			echo "<h2>O CPF já esta cadastrado.</h2> <br>".$conn->error;
 		}else{
 			echo "Erro no cadastramento: <br>".$conn->error;
 		}
 	}
+	
 	function verificar($email, $senha, $conn) {
 		$sql = "SELECT Senha FROM funcionario WHERE Email ='$email'";;
 		
