@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Mar-2021 às 20:01
--- Versão do servidor: 10.4.17-MariaDB
--- versão do PHP: 8.0.1
+-- Tempo de geração: 21-Mar-2021 às 20:53
+-- Versão do servidor: 10.4.18-MariaDB
+-- versão do PHP: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,15 +32,16 @@ CREATE TABLE `cliente` (
   `Email` varchar(50) NOT NULL,
   `Senha` varchar(50) NOT NULL,
   `CPF` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `cliente`
 --
 
 INSERT INTO `cliente` (`Nome`, `Email`, `Senha`, `CPF`) VALUES
-('Ivone Ferreira', 'ivone-lms@hotmail.com', 'vidaflior', '213122 '),
-('Jauro Ferreira', 'ivone-lms@hotmail.com', '213', '213122 ');
+('Vidaflor Ferreir Costa', 'vidaflorrer.lms@gmail.com', 'vidaflor', '10'),
+('Vidaflor Ferreira Costa', 'vidaflor.lms@gmail.com', 'vidaflor', '2 '),
+('Vidaflor Ferreira ewe', 'vidafleqweor.lms@gmail.com', 'eqwfq', '213');
 
 -- --------------------------------------------------------
 
@@ -49,22 +50,22 @@ INSERT INTO `cliente` (`Nome`, `Email`, `Senha`, `CPF`) VALUES
 --
 
 CREATE TABLE `compra` (
-  `CPFcliente` text NOT NULL,
+  `CPFcliente` varchar(50) NOT NULL,
   `Data` date NOT NULL,
-  `CodProduto` text NOT NULL,
+  `CodProduto` varchar(50) NOT NULL,
   `Quantidade` int(11) NOT NULL,
-  `CodCompra` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `CodCompra` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `compra`
 --
 
 INSERT INTO `compra` (`CPFcliente`, `Data`, `CodProduto`, `Quantidade`, `CodCompra`) VALUES
-('1244-03-21', '0000-00-00', '1', 421, ''),
-('1244-03-21', '0000-00-00', '1', 421, ''),
-('421', '2021-03-04', '111', 1, ''),
-('213', '2021-03-05', '111', 3, '1 ');
+('2', '2021-03-13', '1', 9, '1 '),
+('1', '2021-03-01', '1', 10, '2 '),
+('1', '2021-03-10', '1', 4, '3'),
+('2', '2021-03-23', '1', 5, '5');
 
 -- --------------------------------------------------------
 
@@ -77,15 +78,14 @@ CREATE TABLE `funcionario` (
   `Email` varchar(50) NOT NULL,
   `Senha` varchar(50) NOT NULL,
   `CPF` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `funcionario`
 --
 
 INSERT INTO `funcionario` (`Nome`, `Email`, `Senha`, `CPF`) VALUES
-('Vidaflor Ferreira', 'vidaflor.lms77@gmail.com', 'vidaflor', '213 '),
-('', '', '', ' ');
+('Vidaflor Ferreira', 'vidaflor.lms@gmail.com', 'vidaflor', '1 ');
 
 -- --------------------------------------------------------
 
@@ -95,16 +95,46 @@ INSERT INTO `funcionario` (`Nome`, `Email`, `Senha`, `CPF`) VALUES
 
 CREATE TABLE `produto` (
   `NomeProd` varchar(50) NOT NULL,
-  `Valor` decimal(10,1) NOT NULL,
+  `Valor` decimal(10,0) NOT NULL,
   `CodProd` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `produto`
 --
 
 INSERT INTO `produto` (`NomeProd`, `Valor`, `CodProd`) VALUES
-('carr', '3333.0', '2 ');
+('Blusa', '30', '1 ');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`CPF`),
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
+-- Índices para tabela `compra`
+--
+ALTER TABLE `compra`
+  ADD PRIMARY KEY (`CodCompra`);
+
+--
+-- Índices para tabela `funcionario`
+--
+ALTER TABLE `funcionario`
+  ADD PRIMARY KEY (`CPF`),
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
+-- Índices para tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`CodProd`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
