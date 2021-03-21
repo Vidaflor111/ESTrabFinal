@@ -13,7 +13,8 @@ $compradao = new CompraDAO();
 $res = $compradao->Excluir($compra, $conexao);
 
 if($res===TRUE){
-	echo "Compra excluida com sucesso";
+	echo "<script>alert('Compra excluida com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 }else{
 	echo "Erro ao excluir compra:" . $conexao->error;
 }

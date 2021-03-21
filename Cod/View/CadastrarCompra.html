@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="..\css\style.css">
+	<meta charset="UTF-8">
+	<meta name= "viewport" content="width=device-width, initial-scake=1.0">
+	<title>Cadastrar Compra</title>
 </head>
 <body>
-	<h2>Cadastrar Compra</h2>
+	<h2 id= "titulo">Cadastrar Compra</h2>
 	
-<form action="..\Controller\CadastrarCompra.php" method="POST">
+<form class="campo" action="..\Controller\CadastrarCompra.php" method="POST">
 	
-	CPF Cliente: <input type="text" name="ccpf" > <br><br>
-	Data: <input type="date" name="cdata" > <br><br>
-	Codigo do produto: <input type="text" name="cproduto"> <br><br>
-	Quantidade: <input type="text" name="cquantidade"> <br><br>
-	Codigo da compra: <input type="text" name="ccompra"> <br><br>
+	CPF Cliente <input type="text" name="ccpf" > <br>
+	Codigo do produto <input type="text" name="cproduto"> <br>
+	Quantidade <input type="text" name="cquantidade"> <br>
+	Codigo da compra <input type="text" name="ccompra"> <br>
+	Data <input type="date" name="cdata" > <br>
 	
-	<input type="submit" value="Cadastrar">
-	<button type="button" onclick="location.href='inicio.html'">Voltar</button>
+	<input class="botao" type="submit" value="Cadastrar">
+	<button class="botaoB" type="button" onclick="location.href='inicio.html'">Voltar</button>
 </form>
 
 </body>

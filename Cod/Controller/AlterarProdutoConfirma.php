@@ -19,7 +19,8 @@ $produtodao = new ProdutoDAO();
 $res = $produtodao->alterar($prod, $conexao);
 
 if($res===TRUE){
-	echo "Produto alterado com sucesso";
+	echo "<script>alert('Produto alterado com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 }else{
 	echo "Erro ao alterar o produto:" . $conexao->error;
 }

@@ -17,25 +17,34 @@ if($res->num_rows == 1){
 $registro = $res->fetch_assoc();
 echo "<!DOCTYPE html>
 <html>
+<head>
+	<link rel='stylesheet' type='text/css' href='..\css\style.css'>
+	<meta charset='UTF-8'>
+	<meta name= 'viewport' content='width=device-width, initial-scake=1.0'>
+	<title>Excluir Cliente</title>
+</head>
 <body>
-	<h2>Confirme o cliente que você quer excluir</h2>
+	<h2 id= 'titulo'>Confirme o cliente que você quer excluir</h2>
 	
 <form action='..\Controller\ExcluirClienteConfirma.php' method='POST'>
-	Nome: <input type='text' disabled name='cnome' value ='".$registro['Nome']."' > <br><br>
-	Email: <input type='email' disabled name='cemail' value ='".$registro['Email']."'> <br><br>
-	Senha: <input type='password' disabled name='csenha' value ='".$registro['Senha']."'> <br><br>
-	<input type='text' name='ccpf' hidden value ='".$registro['Cpf']."'> <br><br>
-	<input type='submit' value='Confirmar'>
-	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
+	CPF <input type='text' name='ccpf' readonly value ='".$registro['Cpf']."'> <br><br>
+	Nome <input type='text' disabled name='cnome' value ='".$registro['Nome']."' > <br>
+	Email <input type='email' disabled name='cemail' value ='".$registro['Email']."'> <br>
+	Senha <input type='password' disabled name='csenha' value ='".$registro['Senha']."'> <br>
+	
+	<input class='botao' type='submit' value='Confirmar'>
 </form>
-
+<a href='http://localhost/html/view/ExcluirCliente.html'>
+	
+<button class='botaoB'>Voltar</button></a>
 </body>
 </html>
 ";
 
 
 }else{
-	echo "Cliente não encontrado.";
+	echo "<script>alert('Cliente não encontrado.');
+	window.location='http://localhost/html/view/ExcluirCliente.html';</script>";
 }
 
 ?>

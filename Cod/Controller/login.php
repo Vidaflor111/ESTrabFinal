@@ -18,20 +18,8 @@ if ($res) {
 }
 else {
 	// Caso nao emite um erro
-    echo "<!DOCTYPE html>
-	<html>
-	<body>	
-	<h2>Email e/ou Senha incorretos</h2><br>
-	
-	
-	<a href='http://localhost/html/View/login.html'>
-	
-	<button>Voltar</button></a>
-	
-
-	</body>
-	</html>
-	";
+    echo "<script>alert('E-mail e/ou senha incorretos.');
+			window.location='http://localhost/html/view/login.html';</script>";
 }
 
 ?>

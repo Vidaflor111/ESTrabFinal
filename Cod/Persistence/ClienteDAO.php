@@ -16,11 +16,14 @@ class ClienteDAO{
 		
 
 		if($conn->query($sql) ==TRUE){
-			echo "Cliente Cadastrado";
+			echo "<script>alert('Cliente cadastrado com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 		}else if($conn->error == "Duplicate entry '".$cliente->getEmail()."' for key 'Email'"){
-			echo "<h2>O E-mail já esta cadastrado.</h2> <br>".$conn->error;
+			echo "<script>alert('O e-mail já esta vinculado à outra conta.');
+			window.location='http://localhost/html/View/CadastrarCliente.html';</script>";
 		}else if($conn->error == "Duplicate entry '".$cliente->getCPF()."' for key 'PRIMARY'"){
-			echo "<h2>O CPF já esta cadastrado.</h2> <br>".$conn->error;
+			echo "<script>alert('O CPF já esta vinculado à outra conta.');
+			window.location='http://localhost/html/View/CadastrarCliente.html';</script>";
 		}else{
 			echo "Erro no cadastramento: <br>".$conn->error;
 		}

@@ -16,24 +16,12 @@ if($res->num_rows>0){
 	echo "<!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-	font-family: arial, sans-serif;
-	border-collapse: collapse;
-	width:100%;
-}
-	
-td, th{
-	border: 1px solid #dddddd;
-	text-align: 8px;
-	padding: 8px;
-}
-tr:nth_child(){
-	backgroud-color:#dddddd;
-}
-</style>
+<link rel='stylesheet' type='text/css' href='..\css\style.css'>
+	<meta charset='UTF-8'>
+	<meta name= 'viewport' content='width=device-width, initial-scake=1.0'>
+	<title>Consultar Compra</title>
 </head>
-<body><table>
+<body><table id='customers'>
 			<tr>
 				<th>CPFcliente</th>
 				<th>Data</th>
@@ -53,7 +41,8 @@ tr:nth_child(){
 	echo "</table><body></html>";
 }
 else{
-	echo "<script>alert('Compra não cadastrada!')</script>";
+	echo "<script>alert('Compra não encontrada.');
+			window.location='http://localhost/html/view/ConsultarCompra.html';</script>";
 }
 
 

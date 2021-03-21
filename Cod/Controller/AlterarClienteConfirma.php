@@ -23,7 +23,8 @@ $clientedao = new ClienteDAO();
 $res = $clientedao->Alterar($c, $conexao, $cpfAntigo);
 
 if($res===TRUE){
-	echo "Cliente alterado com sucesso";
+	echo "<script>alert('Cliente alterado com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 }else{
 	echo "Erro ao alterar cliente:" . $conexao->error;
 }

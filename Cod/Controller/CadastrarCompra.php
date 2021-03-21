@@ -37,8 +37,8 @@ if(($res->num_rows == 1)and($res1->num_rows == 1)){
 
 
 }else{
-	echo "Erro no cadastramento: <br>
-	<h3> O CPF do cliente e/ou código do produto que voce preencheu não esta cadastrado.</h3>";
+	echo "<script>alert('O CPF do cliente e/ou código do produto que voce preencheu não esta cadastrado.');
+			window.location='http://localhost/html/view/CadastrarCompra.html';</script>";
 }
 
 ?>

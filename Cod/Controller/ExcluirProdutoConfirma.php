@@ -13,7 +13,8 @@ $produtodao = new ProdutoDAO();
 $res = $produtodao->Excluir($produto, $conexao);
 
 if($res===TRUE){
-	echo "Produto excluido com sucesso";
+	echo "<script>alert('Produto excluido com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 }else{
 	echo "Erro ao excluir produto:" . $conexao->error;
 }

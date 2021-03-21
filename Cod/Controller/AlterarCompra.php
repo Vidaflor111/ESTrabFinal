@@ -18,26 +18,36 @@ if($res->num_rows == 1){
 $registro = $res->fetch_assoc();
 echo "<!DOCTYPE html>
 <html>
+<head>
+	<link rel='stylesheet' type='text/css' href='..\css\style.css'>
+	<meta charset='UTF-8'>
+	<meta name= 'viewport' content='width=device-width, initial-scake=1.0'>
+	<title>Alterar Cliente</title>
+</head>
 <body>
-	<h2>Confirme a compra que você quer Alterar</h2>
+	<h2 id= 'titulo'>Confirme a compra que você quer Alterar</h2>
 	
-<form action='..\Controller\AlterarCompraConfirma.php' method='POST'>
-	Novo CPF Cliente: <input type='text' name='ccpf' value ='".$registro['CPFcliente']."' > <br><br>
-	Nova Data: <input type='date' name='cdata' value ='".$registro['data']."'> <br><br>
-	Novo Código do produto: <input type='text' name='cproduto' value ='".$registro['CodProduto']."'> <br><br>
-	Nova quantidade: <input type='text' name='cquantidade' value ='".$registro['Quantidade']."' > <br><br>
-	<input type='text' hidden name='ccompra' value ='".$registro['CodCompra']."'> <br><br>
-	<input type='submit' value='Alterar'>
-	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
+<form class='campo' action='..\Controller\AlterarCompraConfirma.php' method='POST'>
+	Código da compra<input type='text' readonly name='ccompra' value ='".$registro['CodCompra']."'> <br><br>
+	Novo CPF Cliente <input type='text' name='ccpf' value ='".$registro['CPFcliente']."' > <br>
+	Novo Código do produto: <input type='text' name='cproduto' value ='".$registro['CodProduto']."'> <br>
+	Nova quantidade <input type='text' name='cquantidade' value ='".$registro['Quantidade']."' > <br>
+	Nova Data <input type='date' name='cdata' value ='".$registro['data']."'> <br>
+	
+	<input class='botao' type='submit' value='Alterar'>
+	
 </form>
-
+<a href='http://localhost/html/view/AlterarCompra.html'>
+	
+	<button class='botaoB'>Voltar</button></a>
 </body>
 </html>
 ";
 
 
 }else{
-	echo "Cliente não encontrado.";
+	echo "<script>alert('Compra não encontrada.');
+			window.location='http://localhost/html/view/AlterarCompra.html';</script>";
 }
 
 ?>

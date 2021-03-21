@@ -13,7 +13,8 @@ $clientedao = new ClienteDAO();
 $res = $clientedao->Excluir($cpf, $conexao);
 
 if($res===TRUE){
-	echo "Cliente excluido com sucesso";
+	echo "<script>alert('Cliente excluido com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 }else{
 	echo "Erro ao excluir cliente:" . $conexao->error;
 }

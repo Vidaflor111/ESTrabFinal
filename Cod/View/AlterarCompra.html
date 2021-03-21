@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="..\css\style.css">
+	<meta charset="UTF-8">
+	<meta name= "viewport" content="width=device-width, initial-scake=1.0">
+	<title>Alterar Compra</title>
 </head>
 <body>
-	<h2>Alterar Compra</h2>
+	<h2 id= "titulo">Alterar Compra</h2>
 	
-<form action="..\Controller\AlterarCompra.php" method="POST">
-	Codigo da compra: <input type="text" name="ccompra" > <br><br>
-	<input type="submit" value="Alterar">
-	<button type="button" onclick="location.href='inicio.html'">Voltar</button>
+<form class="campo" action="..\Controller\AlterarCompra.php" method="POST">
+	Codigo da compra <input type="text" name="ccompra" > <br><br>
+	<input class="botao" type="submit" value="Alterar">
+	<button class="botaoB" type="button" onclick="location.href='inicio.html'">Voltar</button>
 </form>
 
 </body>

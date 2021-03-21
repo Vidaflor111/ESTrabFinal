@@ -17,9 +17,11 @@ class CompraDAO{
 		
 
 		if($conn->query($sql) ==TRUE){
-			echo "Compra cadastrada com sucesso";
+			echo "<script>alert('Compra cadastrada com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 		}else if($conn->error == "Duplicate entry '".$compra->getCodCompra()."' for key 'PRIMARY'"){
-			echo "<h3>Código da compra já esta cadastrado.</h3> <br>".$conn->error;
+			echo "<script>alert('O código já esta vinculado à outra compra.');
+			window.location='http://localhost/html/view/CadastrarCompra.html';</script>";
 		}else{
 			echo "Erro no cadastramento: <br>".$conn->error;
 		}

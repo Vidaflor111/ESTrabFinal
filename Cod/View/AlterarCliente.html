@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="..\css\style.css">
+	<meta charset="UTF-8">
+	<meta name= "viewport" content="width=device-width, initial-scake=1.0">
+	<title>Alterar Cliente</title>
 </head>
 <body>
-	<h2>Alterar Cliente</h2>
+	<h2 id= "titulo">Alterar Cliente</h2>
 	
-<form action="..\Controller\AlterarCliente.php" method="POST">
-	CPF: <input type="text" name="ccpf" > <br><br>
-	<input type="submit" value="Alterar">
-	<button type="button" onclick="location.href='inicio.html'">Voltar</button>
+<form class="campo" action="..\Controller\AlterarCliente.php" method="POST">
+	CPF <input type="text" name="ccpf" > <br><br>
+	<input class="botao" type="submit" value="Alterar">
+	<button class="botaoB" type="button" onclick="location.href='inicio.html'">Voltar</button>
 
 </form>
 

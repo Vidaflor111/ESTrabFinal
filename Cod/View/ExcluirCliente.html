@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="..\css\style.css">
+	<meta charset="UTF-8">
+	<meta name= "viewport" content="width=device-width, initial-scake=1.0">
+	<title>Excluir Cliente</title>
 </head>
 <body>
-	<h2>Excluir Cliente</h2>
+	<h2 id= "titulo">Excluir Cliente</h2>
 	
-<form action="..\Controller\ExcluirCliente.php" method="POST">
-	CPF: <input type="text" name="ccpf" > <br><br>
-	<input type="submit" value="Excluir">
-	<button type="button" onclick="location.href='inicio.html'">Voltar</button>
+<form class="campo" action="..\Controller\ExcluirCliente.php" method="POST">
+	CPF <input type="text" name="ccpf" > <br><br>
+	<input class="botao" type="submit" value="Excluir">
+	<button class="botaoB" type="button" onclick="location.href='inicio.html'">Voltar</button>
 </form>
 
 </body>

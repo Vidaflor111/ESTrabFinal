@@ -20,26 +20,35 @@ if($res->num_rows == 1){
 $registro = $res->fetch_assoc();
 echo "<!DOCTYPE html>
 <html>
+<head>
+	<link rel='stylesheet' type='text/css' href='..\css\style.css'>
+	<meta charset='UTF-8'>
+	<meta name= 'viewport' content='width=device-width, initial-scake=1.0'>
+	<title>Alterar Cliente</title>
+</head>
 <body>
-	<h2>Confirme o cliente que você quer Alterar</h2>
+	<h2 id= 'titulo'>Confirme o cliente que você quer alterar</h2>
 	
-<form action='..\Controller\AlterarClienteConfirma.php' method='POST'>
-	<input type='text' name='cantigocpf' hidden value ='".$registro['Cpf']."'> <br>
-	Novo Nome: <input type='text' name='cnome' value ='".$registro['Nome']."' > <br><br>
-	Novo Email: <input type='email' name='cemail' value ='".$registro['Email']."'> <br><br>
-	Nova Senha: <input type='password' name='csenha' value ='".$registro['Senha']."'> <br><br>
-	Novo CPF: <input type='text' name='ccpf' value ='".$registro['Cpf']."'> <br><br>
-	<input type='submit' value='Alterar'>
-	<button type='button' onclick='location.href='inicio.html''>Voltar</button>
+<form class='campo' action='..\Controller\AlterarClienteConfirma.php' method='POST'>
+	CPF Antigo <input type='text' name='cantigocpf' readonly value ='".$registro['Cpf']."'> <br>
+	Novo Nome <input type='text' name='cnome' value ='".$registro['Nome']."' > <br><br>
+	Novo Email <input type='email' name='cemail' value ='".$registro['Email']."'> <br><br>
+	Nova Senha <input type='password' name='csenha' value ='".$registro['Senha']."'> <br><br>
+	Novo CPF <input type='text' name='ccpf' value ='".$registro['Cpf']."'> <br><br>
+	<input class='botao' type='submit' value='Alterar'>
+	
 </form>
-
+	<a href='http://localhost/html/view/AlterarCliente.html'>
+	
+	<button class='botaoB'>Voltar</button></a>
 </body>
 </html>
 ";
 
 
 }else{
-	echo "Cliente não encontrado.";
+	echo "<script>alert('Cliente não encontrado.');
+			window.location='http://localhost/html/view/AlterarCliente.html';</script>";
 }
 
 ?>

@@ -1,0 +1,173 @@
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family: sans-serif;
+    color: #9400D3;
+    margin-left: 0%;
+
+} 
+
+
+#check{
+    display: inline-block;
+}
+
+
+/* Elemento de tag <body> */
+body{
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color: #000000;
+    margin-left: 40%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+/* Elemento de tag <form> */
+form{
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #000000;
+    margin-left: 1.5%;
+    margin-top: 3%;
+	justify-content: center;
+}
+
+/* Elementos de tags <body>, <input>, <Select> e <button> */
+input, select, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #000000;
+    border-radius: 5px;
+	margin-top: 1%;
+}
+
+
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text, date, decimal, email e password*/
+.campo input[type="text"], .campo input[type="email"], .campo input[type="password"], .campo input[type="date"], .campo input[type="decimal"]{
+    padding: 0.2em;
+    border: 1px solid #9A32CD;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+
+/* Elemento de classe "campo" com tag <input> com estado da pseudoclasse "focus"*/
+.campo input:focus{
+    background: #FFE1FF;
+}
+
+/* Elemento de classe "botao" */
+.botao {
+    font-size: 1.3em;
+    background: #9400D3;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 78%;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+    background: #8B008B;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botao, select{
+    cursor: pointer;
+}
+/* Elemento de classe "botaoB" */
+.botaoB {
+    font-size: 1.1em;
+    background: #9400D3;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 84%;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+/* Elemento de classe "botaoB" com o estado da pseudoclasse "hover" */
+.botaoB:hover {
+    background: #8B2252;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+/* Elementos de classe botãoB e de tag <select> */
+.botaoB, select{
+    cursor: pointer;
+}
+
+/* Elemento de classe "botaoA" */
+.botaoA {
+    font-size: 1em;
+    background: #BF3EFF;
+    border: 0;
+    color: #FFFFFF;
+    padding: 0.2em 0.6em;
+
+    
+}
+
+/* Elemento de classe "botaoA" com o estado da pseudoclasse "hover" */
+.botaoA:hover {
+    background: #8B008B;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botãoA e de tag <select> */
+.botaoA, select{
+    cursor: pointer;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: -35%;
+  margin-top: 2%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #9400D3;
+  color: white;
+}

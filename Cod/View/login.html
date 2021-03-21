@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="..\css\estilo.css">
+	<link rel="stylesheet" type="text/css" href="..\css\style.css">
 	<meta charset="UTF-8">
 	<meta name= "viewport" content="width=device-width, initial-scake=1.0">
 	<title>Login</title>
 </head>
 
 <body>
-	<div id="login-container">
-		<h2>login de Funcionário</h2>
-		<form action="..\Controller\login.php" method="POST">
-			Email: <input type="email" name="cemail" placeholder="Digite seu e-mail"> <br><br>
-			Senha: <input type="password" name="csenha" placeholder="Digite sua senha"> <br><br>
-			<input type="submit" value="Login">
-			<button type="button" onclick="location.href='CadastrarFuncionario.html'">Cadastrar</button>
-		</form>
-	</div>
+	<h2 id= "titulo">Login de Funcionário</h2>
+	<br>
+		
+	<form class="campo" action="..\Controller\login.php" method="POST">
+		
+		Email<input type="email" name="cemail" placeholder="Digite seu e-mail"> <br><br>
+		Senha<input type="password" name="csenha" placeholder="Digite sua senha"> <br><br>
+		<input class="botao" type="submit" value="Login">
+		<button class="botaoB" type="button" onclick="location.href='CadastrarFuncionario.html'">Cadastrar</button>
+			
+	</form>
+
+	
 </body>
 </html>

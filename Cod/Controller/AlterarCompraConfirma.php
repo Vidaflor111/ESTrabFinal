@@ -33,21 +33,21 @@ if(($res->num_rows == 1)and($res1->num_rows == 1)){
 	//Criando objeto DAO
 	$compradao = new CompraDAO();
 	//Salvando Compra
-	$compradao->salvar($comp, $conexao);
 	//res2= resultado, para alterar a compra
 	$res2 = $compradao->Alterar($comp, $conexao);
 
 	//para ver se a compra foi alterada
 	if($res2===TRUE){
-	echo "<br><br><h2>Compra alterada com sucesso.</h2>";
+	echo "<script>alert('Compra alterada com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 	}else{
 	echo "Erro ao alterar a compra:" . $conexao->error;
 	}
 
 
 }else{
-	echo "Erro no cadastramento: <br>
-	<h3> O CPF do cliente e/ou código do produto que voce preencheu não esta cadastrado.</h3>";
+	echo "<script>alert('O CPF do cliente e/ou código do produto que voce preencheu não esta cadastrado.');
+	window.location='http://localhost/html/view/AlterarCompra.html';</script>";
 }
 
 

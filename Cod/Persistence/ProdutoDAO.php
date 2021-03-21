@@ -15,9 +15,11 @@ class ProdutoDAO{
 		
 
 		if($conn->query($sql) ==TRUE){
-			echo "Produto Cadastrado";
+			echo "<script>alert('Produto cadastrado com sucesso.');
+			window.location='http://localhost/html/view/Inicio.html';</script>";
 		}else if($conn->error == "Duplicate entry '".$prod->getCod()."' for key 'PRIMARY'"){
-			echo "<h2>Código do produto já esta cadastrado.</h2> <br>".$conn->error;
+			echo "<script>alert('O código já esta vinculado à outro produto.');
+			window.location='http://localhost/html/View/CadastrarProduto.html';</script>".$conn->error;
 		}else{
 			echo "Erro no cadastramento: <br>".$conn->error;
 		}
