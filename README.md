@@ -10,6 +10,8 @@ PHP 7.3.27
 
 HTML5 5.0
 
+CSS
+
 Servidor - Apache 2.4.46
 
 Banco de dados - MariaDB 10.4.18
@@ -21,7 +23,7 @@ Teste - PHPUnit - 9.5.2
 
 Commit - Informe o que foi feito no commit
 
-Branchs:
+Branchs:O sistema focará no beanch main.
 
 Definição de pastas:
 - Os documentos devem ser guardados na pasta requisitos
