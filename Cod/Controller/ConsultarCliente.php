@@ -37,7 +37,13 @@ if($res->num_rows>0){
 			 "<td>".$registro['Cpf']. "</td>";
 		echo "</tr>";
 	}
-	echo "</table><body></html>";
+	echo "</table><body>
+	<a href='http://localhost/html/view/inicio.html'>
+	<button class='botao'>Inicio</button></a>
+	
+	<a href='http://localhost/html/view/ConsultarCliente.html'>
+	<button class='botaoB'>Voltar</button></a>
+	</html>";
 }
 else{
 	echo "<script>alert('Cliente não encontrado.');

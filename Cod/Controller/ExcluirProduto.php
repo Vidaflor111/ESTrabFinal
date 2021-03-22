@@ -26,7 +26,7 @@ echo "<!DOCTYPE html>
 <body>
 	<h2 id= 'titulo'>Confirme o Produto que você quer excluir</h2>
 	
-<form action='..\Controller\ExcluirProdutoConfirma.php' method='POST'>
+<form class='campo' action='..\Controller\ExcluirProdutoConfirma.php' method='POST'>
 	Nome <input type='text' name='cnome' value ='".$registro['NomeProd']."' > <br><br>
 	Valor <input type='decimal' name='cvalor' value =".$registro['Valor']."> <br><br>
 	<input type='text' name='cprod' hidden value ='".$registro['CodProd']."'> <br>

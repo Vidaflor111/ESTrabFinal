@@ -26,7 +26,7 @@ echo "<!DOCTYPE html>
 <body>
 	<h2 id= 'titulo'>Confirme o cliente que você quer excluir</h2>
 	
-<form action='..\Controller\ExcluirClienteConfirma.php' method='POST'>
+<form class='campo' action='..\Controller\ExcluirClienteConfirma.php' method='POST'>
 	CPF <input type='text' name='ccpf' readonly value ='".$registro['Cpf']."'> <br><br>
 	Nome <input type='text' disabled name='cnome' value ='".$registro['Nome']."' > <br>
 	Email <input type='email' disabled name='cemail' value ='".$registro['Email']."'> <br>

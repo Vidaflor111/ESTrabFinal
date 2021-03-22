@@ -32,7 +32,7 @@ echo "<!DOCTYPE html>
 <form class='campo' action='..\Controller\AlterarProdutoConfirma.php' method='POST'>
 	Código produto <input type='text' name='cprod' readonly value ='".$registro['CodProd']."'> <br><br>
 	Novo Nome <input type='text' name='cnome' value ='".$registro['NomeProd']."' > <br>
-	Novo Valor <input type='decimal' name='cvalor' value =".$registro['Valor']."> <br>
+	Novo Valor (Use '.' no lugar de ',') <input type='decimal' name='cvalor' value =".$registro['Valor']."> <br>
 	<input class='botao' type='submit' value='Alterar'>
 	
 </form>

@@ -26,7 +26,7 @@ echo "<!DOCTYPE html>
 <body>
 	<h2 id= 'titulo'>Confirme a compra que você quer excluir</h2>
 	
-<form action='..\Controller\ExcluirCompraConfirma.php' method='POST'>
+<form class='campo' action='..\Controller\ExcluirCompraConfirma.php' method='POST'>
 	CPF Cliente <input type='text' disabled name='ccpf' value ='".$registro['CPFcliente']."' > <br><br>
 	Data <input type='date' disabled name='cdata' value ='".$registro['data']."'> <br><br>
 	Codigo do produto: <input type='text' disabled name='cproduto' value ='".$registro['CodProduto']."'> <br><br>
